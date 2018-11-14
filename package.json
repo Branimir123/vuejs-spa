@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Learning repo for vuejs",
   "scripts": {
+    "start": "node server",
+    "build": "webpack --config ./build/webpack.base.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/Branimir123/vuejs-spa#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }
