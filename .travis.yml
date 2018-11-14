@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "node"
+
+cache: bundler
+
+install:
+  - cd client/
+  - npm install
+  - cd ../server/
+  - npm install
+  - cd ..
+
+script:
+  - cd client/
+  - npm run build
+  - npm run test
+  - cd ../server
+  - rm -rf public/
+  - npm run build
+  - npm run test
