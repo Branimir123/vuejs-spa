@@ -9,7 +9,6 @@ install:
   - npm install
 
 script:
-  - cd client/
   - npm run test:unit
   - npm run build
   - cd ../server
