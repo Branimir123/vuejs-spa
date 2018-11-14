@@ -1,3 +1,7 @@
 import { app }  from './app';
 
-app.$mount('#app');s
+app.$mount('#app');
+
+if(module.hot) {
+    module.hot.accept();
+}
