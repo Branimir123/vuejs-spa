@@ -27,6 +27,18 @@ const userSchema = new mongoose.Schema(
         contactNumber: {
             type: String,
             maxlength: 15
+        },
+        gender: {
+            type: String,
+            enum: ['male', 'female', 'unknown', 'group']
+        },
+        status: {
+            type: String,
+            enum: ['lost', 'found']
+        },
+        isActive: {
+            type: Number,
+            enum: [0 ,1]
         }
         //TODO: add comments here
     },
