@@ -38,7 +38,9 @@ const userSchema = new mongoose.Schema(
         },
         isActive: {
             type: Number,
-            enum: [0 ,1]
+            min: 0,
+            max: 1,
+            default: 1
         }
         //TODO: add comments here
     },
