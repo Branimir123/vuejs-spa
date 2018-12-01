@@ -6,9 +6,11 @@ cache: bundler
 
 install:
   - cd client/
+  - npm install 
+  - cd ../server
   - npm install
 
 script:
-  - npm run test:unit
   - npm run build
-  - cd ../server
+  - cd ../client && npm run test:unit
+  - npm run build
